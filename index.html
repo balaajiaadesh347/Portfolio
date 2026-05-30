@@ -1,191 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A S Balaaji Aadesh | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A S Balaaji Aadesh | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f0f0f,#1b1b1b,#2c1f16);
+color:#fff;transition:.4s;
+}
+.light-mode{
+background:linear-gradient(135deg,#f5f5f5,#ffffff,#ececec);
+color:#222;
+}
+header{
+position:fixed;top:0;width:100%;z-index:1000;
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+nav{
+max-width:1200px;margin:auto;padding:18px 30px;
+display:flex;justify-content:space-between;align-items:center;
+}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{text-decoration:none;color:inherit}
+.theme-btn{
+padding:8px 14px;border:none;border-radius:10px;cursor:pointer;
+background:rgba(255,255,255,.1);color:white;
+}
+section{
+min-height:100vh;padding:120px 8% 80px;
+display:flex;justify-content:center;align-items:center;
+}
+.hero{text-align:center}
+.profile{
+width:180px;height:180px;border-radius:50%;
+display:flex;justify-content:center;align-items:center;
+margin:auto;margin-bottom:25px;
+background:rgba(255,255,255,.08);
+font-size:60px;color:#d2a679;
+}
+.hero h1{font-size:3rem}
+.hero span{color:#d2a679}
+.hero p{max-width:700px;margin:20px auto;line-height:1.8}
+.btn{
+display:inline-block;margin:10px;padding:14px 24px;
+border-radius:30px;text-decoration:none;color:white;
+background:rgba(255,255,255,.1);
+}
+.glass{
+width:100%;max-width:1000px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:40px;border-radius:25px;
+}
+h2{text-align:center;color:#d2a679;margin-bottom:20px}
+.skills{
+display:flex;flex-wrap:wrap;gap:15px;justify-content:center
+}
+.skill{
+padding:12px 20px;border-radius:12px;
+background:rgba(255,255,255,.08)
+}
+input,textarea{
+width:100%;padding:15px;margin-top:12px;
+border:none;border-radius:10px;
+background:rgba(255,255,255,.08);
+color:inherit;
+}
+button{cursor:pointer}
+footer{text-align:center;padding:20px}
+.light-mode .glass,
+.light-mode .profile,
+.light-mode header{background:rgba(255,255,255,.75)}
+@media(max-width:768px){
+nav{flex-direction:column;gap:10px}
+.hero h1{font-size:2rem}
+}
+</style>
+</head>
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <h2>Balaaji Aadesh</h2>
+<header>
+<nav>
+<h3>Balaaji Aadesh</h3>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <!-- Hero Section -->
-    <section id="home">
+<button id="themeToggle" class="theme-btn">🌙</button>
+</nav>
+</header>
 
-        <div>
-            <h1>Hello, I'm</h1>
-            <h1>A S Balaaji Aadesh</h1>
+<section id="home">
+<div class="hero">
+<div class="profile">BA</div>
 
-            <h3>Computer Science Student</h3>
+<h1>Hello, I'm <span id="typing"></span></h1>
 
-            <p>
-                A passionate learner with leadership qualities,
-                patience, and problem-solving skills.
-            </p>
+<p>
+Computer Science Student passionate about problem solving,
+leadership and continuous learning.
+</p>
 
-            <button>Download Resume</button>
-            <button>Contact Me</button>
-        </div>
+<a href="#" class="btn">Download Resume</a>
+<a href="#contact" class="btn">Contact Me</a>
+</div>
+</section>
 
-        <div>
-            <!-- Add your photo later -->
-            <img src="profile.jpg" alt="Profile Photo">
-        </div>
+<section id="about">
+<div class="glass">
+<h2>About Me</h2>
+<p style="line-height:2;text-align:center">
+A person with good leadership qualities and can handle situations with patience.
+Also a good problem solver who enjoys learning technology and building solutions.
+</p>
+</div>
+</section>
 
-    </section>
+<section id="skills">
+<div class="glass">
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">Python Basics</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Leadership</div>
+<div class="skill">Communication</div>
+<div class="skill">Teamwork</div>
+</div>
+</div>
+</section>
 
-    <!-- About Section -->
-    <section id="about">
+<section id="projects">
+<div class="glass">
+<h2>Projects</h2>
+<p style="text-align:center">
+Projects will be added soon.
+</p>
+</div>
+</section>
 
-        <h2>About Me</h2>
+<section id="contact">
+<div class="glass">
+<h2>Contact</h2>
 
-        <p>
-            I am a Computer Science student who enjoys solving problems
-            and learning new technologies. I have good leadership qualities
-            and can handle situations patiently and effectively.
-        </p>
+<p>Email: balaajiaadesh.selvapandian@gmail.com</p>
+<p>Phone: 8608226598</p>
+<p><a href="https://github.com/balaajiaadesh347">GitHub</a></p>
+<p><a href="https://www.linkedin.com/in/a-s-balaaji-aadesh-474b1937b">LinkedIn</a></p>
 
-        <p>
-            I am interested in web development, programming,
-            and building useful digital solutions.
-        </p>
+<br>
 
-    </section>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button class="btn" type="submit">Send Message</button>
+</form>
 
-    <!-- Skills Section -->
-    <section id="skills">
+<p style="margin-top:15px;font-size:.9rem">
+Replace the JavaScript fetch URL with your backend or EmailJS service.
+</p>
 
-        <h2>Skills</h2>
+</div>
+</section>
 
-        <div>
+<footer>
+© 2026 A S Balaaji Aadesh
+</footer>
 
-            <div>
-                <h3>Python Basics</h3>
-            </div>
+<script>
+const text="A S Balaaji Aadesh";
+let i=0;
+function typeWriter(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typeWriter,120);
+}
+}
+window.onload=typeWriter;
 
-            <div>
-                <h3>Problem Solving</h3>
-            </div>
+document.getElementById("themeToggle").addEventListener("click",()=>{
+document.body.classList.toggle("light-mode");
+document.getElementById("themeToggle").textContent=
+document.body.classList.contains("light-mode")?"☀️":"🌙";
+});
 
-            <div>
-                <h3>Leadership</h3>
-            </div>
-
-            <div>
-                <h3>Communication</h3>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-
-        <h2>Projects</h2>
-
-        <div>
-
-            <h3>Projects Coming Soon</h3>
-
-            <p>
-                Currently working on building exciting projects
-                in web development and programming.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-
-        <h2>Resume</h2>
-
-        <p>
-            Click below to download my resume.
-        </p>
-
-        <a href="resume.pdf" download>
-            <button>Download Resume</button>
-        </a>
-
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-
-        <h2>Contact Me</h2>
-
-        <div>
-
-            <p>
-                <strong>Email:</strong>
-                balaajiaadesh.selvapandian@gmail.com
-            </p>
-
-            <p>
-                <strong>Phone:</strong>
-                8608226598
-            </p>
-
-            <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/balaajiaadesh347" target="_blank">
-                    github.com/balaajiaadesh347
-                </a>
-            </p>
-
-            <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/a-s-balaaji-aadesh-474b1937b" target="_blank">
-                    linkedin.com/in/a-s-balaaji-aadesh-474b1937b
-                </a>
-            </p>
-
-        </div>
-
-        <!-- Contact Form -->
-        <form>
-
-            <input type="text" placeholder="Your Name" required>
-
-            <input type="email" placeholder="Your Email" required>
-
-            <textarea placeholder="Your Message"></textarea>
-
-            <button type="submit">Send Message</button>
-
-        </form>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 A S Balaaji Aadesh. All Rights Reserved.
-        </p>
-
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Connect EmailJS or your Node.js backend to receive messages.");
+});
+</script>
 
 </body>
 </html>
