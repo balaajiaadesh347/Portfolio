@@ -162,10 +162,29 @@ Projects will be added soon.
 <br>
 
 <form id="contactForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" placeholder="Your Message" required></textarea>
-<button class="btn" type="submit">Send Message</button>
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required>
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required>
+
+    <textarea
+        id="message"
+        placeholder="Your Message"
+        required>
+    </textarea>
+
+    <button type="submit" class="btn">
+        Send Message
+    </button>
+
 </form>
 
 <p style="margin-top:15px;font-size:.9rem">
@@ -200,6 +219,52 @@ document.body.classList.contains("light-mode")?"☀️":"🌙";
 document.getElementById("contactForm").addEventListener("submit",function(e){
 e.preventDefault();
 alert("Connect EmailJS or your Node.js backend to receive messages.");
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("R9fvFMMmSpPCejYAq");
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const submitBtn = this.querySelector("button");
+    submitBtn.innerText = "Sending...";
+    submitBtn.disabled = true;
+
+    emailjs.send(
+        "service_aaxi4wc",
+        "template_ax4i2kl",
+        {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        }
+    )
+    .then(() => {
+
+        alert("Message sent successfully!");
+
+        document.getElementById("contactForm").reset();
+
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+
+    })
+    .catch((error) => {
+
+        console.error(error);
+
+        alert("Failed to send message.");
+
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+
+    });
+
 });
 </script>
 
